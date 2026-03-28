@@ -1,0 +1,129 @@
+/* ============================================================
+   Brand Design System — Design Tokens
+   Source: Figma "Brand Design System" (shadcn/ui-inspired)
+   Primary: Indigo · Neutral: Zinc · WCAG AA accessible
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Light Mode (default) ─────────────────────────────────── */
+:root {
+  /* Semantic color tokens */
+  --background: #ffffff;
+  --foreground: #09090b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #4f46e5;
+
+  /* Zinc — Neutral palette */
+  --zinc-50:  #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+
+  /* Indigo — Primary brand palette */
+  --indigo-50:  #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+
+  /* Border radius */
+  --radius-none: 0px;
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-2xl:  16px;
+  --radius-3xl:  24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:   0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md:   0px 4px 8px -2px rgba(0, 0, 0, 0.08);
+  --shadow-lg:   0px 8px 16px -4px rgba(0, 0, 0, 0.10);
+  --shadow-xl:   0px 16px 24px -5px rgba(0, 0, 0, 0.12);
+  --shadow-2xl:  0px 24px 48px -8px rgba(0, 0, 0, 0.20);
+
+  /* Spacing scale (4px base unit) */
+  --spacing-0:    0px;
+  --spacing-0-5:  2px;
+  --spacing-1:    4px;
+  --spacing-1-5:  6px;
+  --spacing-2:    8px;
+  --spacing-2-5:  10px;
+  --spacing-3:    12px;
+  --spacing-4:    16px;
+  --spacing-5:    20px;
+  --spacing-6:    24px;
+  --spacing-8:    32px;
+  --spacing-10:   40px;
+  --spacing-12:   48px;
+  --spacing-16:   64px;
+  --spacing-20:   80px;
+  --spacing-24:   96px;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #09090b;
+  --card-foreground: #fafafa;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #6366f1;
+}
+
+/* ── Base styles ──────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
