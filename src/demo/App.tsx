@@ -12,6 +12,7 @@ import { Switch } from '../components/Switch'
 import { Avatar } from '../components/Avatar'
 import { Alert, AlertTitle, AlertDescription } from '../components/Alert'
 import { Display, Heading, Text, LabelText, Caption } from '../components/Typography'
+import { Dialog } from '../components/Dialog'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -27,6 +28,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function App() {
   const [dark, setDark] = React.useState(false)
+  const [dialogOpen, setDialogOpen] = React.useState(false)
 
   React.useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -172,6 +174,28 @@ export default function App() {
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>Your session has expired. Please sign in again.</AlertDescription>
           </Alert>
+        </Section>
+
+        {/* Dialog */}
+        <Section title="Dialog">
+          <div className="flex gap-3">
+            <Button onClick={() => setDialogOpen(true)}>Open Dialog</Button>
+          </div>
+          <Dialog
+            open={dialogOpen}
+            onClose={() => setDialogOpen(false)}
+            title="Edit Profile"
+            description="Update your account settings. Click save when you're done."
+            footer={
+              <>
+                <Button variant="outline" onClick={() => setDialogOpen(false)}>Cancel</Button>
+                <Button onClick={() => setDialogOpen(false)}>Save changes</Button>
+              </>
+            }
+          >
+            <Input label="Name" placeholder="Your full name" />
+            <Input label="Email" type="email" placeholder="your@email.com" />
+          </Dialog>
         </Section>
 
         {/* Cards */}
